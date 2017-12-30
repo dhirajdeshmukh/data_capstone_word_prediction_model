@@ -73,7 +73,7 @@ badWords = readLines(profanityFile)
 close(profanityFile)
 
 # create volatile corpus object of all sample files created above
-corpus <- VCorpus(DirSource(directory = "corpus",encoding = "UTF-8")) 
+corpus <- VCorpus(DirSource(directory = "corpus")) 
 
 toSpace <- content_transformer(function(x, pattern) gsub(pattern, " ", x)) 
 
