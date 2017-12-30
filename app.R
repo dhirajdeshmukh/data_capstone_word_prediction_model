@@ -65,8 +65,7 @@ ui <-  navbarPage("Data Capstone: Coursera Project",
                             # Sidebar
                             sidebarLayout(
                               sidebarPanel(
-                                helpText("Enter sentence to begin the next word prediction"),
-                                textInput("inputString", "Enter a phrase (multiple words) here",value = ""),
+                                textInput("inputString", "Enter a word or multiple words here",value = ""),
                                 br(),
                                 br(),
                                 br(),
@@ -75,9 +74,6 @@ ui <-  navbarPage("Data Capstone: Coursera Project",
                               mainPanel(
                                 h2("Next Word Predicted"),
                                 verbatimTextOutput("prediction"),
-                                strong("Input Statement:"),
-                                tags$style(type='text/css', '#text1 {background-color: yellow; color: Black;}'), 
-                                textOutput('text1'),
                                 br() 
                               )
                             )
